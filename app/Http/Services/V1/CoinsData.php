@@ -18,7 +18,7 @@ class CoinsData
     static function storeCoinsData($data)
     {
         foreach ($data as $item) {
-//            try {
+            try {
                 // Prepare the data for insertion
                 Coin::updateOrCreate(
                     ['coin_id' => $item['id']],
@@ -36,10 +36,10 @@ class CoinsData
                         'price_change_percentage_24h' => $item['price_change_percentage_24h']
                     ],
                 );
-//            } catch (\Exception $e) {
-//                // Log the exception message
-//                Log::error("Error saving coin: {$e->getMessage()}");
-//            }
+            } catch (\Exception $e) {
+                // Log the exception message
+                Log::error("Error saving coin: {$e->getMessage()}");
+            }
         }
     }
 
@@ -67,19 +67,21 @@ class CoinsData
         return [];
     }
 
-    static function top10Prices(array $data): array
-    {
-        // Ensure the data is an array
-        if (!is_array($data)) {
-            throw new RuntimeException('Input is not an array.');
-        }
+ // If you just want to store the top 10 cryptocurrencies, this function will return the desired list:
 
-        // Sort the array by 'current_price' in descending order
-        usort($data, function ($a, $b) {
-            return $b['current_price'] - $a['current_price'];
-        });
-
-        // Extract the top 10 cryptocurrencies
-        return array_slice($data, 0, 10);
-    }
+//    static function top10Prices(array $data): array
+//    {
+//        // Ensure the data is an array
+//        if (!is_array($data)) {
+//            throw new RuntimeException('Input is not an array.');
+//        }
+//
+//        // Sort the array by 'current_price' in descending order
+//        usort($data, function ($a, $b) {
+//            return $b['current_price'] - $a['current_price'];
+//        });
+//
+//        // Extract the top 10 cryptocurrencies
+//        return array_slice($data, 0, 10);
+//    }
 }
