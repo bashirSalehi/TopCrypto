@@ -1,10 +1,10 @@
 ## About TopCrypto
 
 TopCrypto is a Laravel web application to get the latest cryptocurrency prices.
--Automatic update every minute.
--Manual update capability.
--Show Top 10 cryptocurrency.
--Email notification after price changes above 10%
+- Automatic update every minute.
+- Manual update capability.
+- Show Top 10 cryptocurrency.
+- Email notification after price changes above 10%
 
 
 
