@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+table {
+    display: grid;
+    border-collapse: collapse;
+    min-width: 100%;
+    grid-template-columns:
+    minmax(50px, 0.3fr)
+    minmax(50px, 0.9fr)
+    minmax(50px, 0.5fr)
+    minmax(50px, 0.9fr)
+    minmax(50px, 0.4fr)
+    minmax(50px, 0.8fr)
+    minmax(50px, 0.8fr)
+    minmax(50px, 0.3fr)
+    minmax(50px, 0.9fr)
+    minmax(50px, 0.7fr)
+    minmax(50px, 0.7fr)
+    minmax(50px, 1fr)
+    minmax(50px, 0.9fr);
+}
+
+thead,
+tbody,
+tr {
+    display: contents;
+}
+
+th,
+td {
+    padding: 15px 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+th {
+    position: sticky;
+    top: 0;
+    background: #6c7ae0;
+    text-align: left;
+    font-weight: normal;
+    font-size: 1.1rem;
+    color: white;
+}
+
+th:last-child {
+    border: 0;
+}
+
+td {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #808080;
+}
+
+tr:nth-child(even) td {
+    background: #f8f6ff;
+}
+
+.coin_icon {
+    width: 20px;
+}
+
+.img_box {
+    text-align: center;
+}
+
+.button {
+    background-color: #04AA6D; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.button {
+    background-color: white;
+    color: black;
+    border: 2px solid #04AA6D;
+}
+
+.button:hover {
+    background-color: #04AA6D;
+    color: white;
+}
+
+.refresh {
+    text-align: center;
+    margin: 25px 0;
+}
